@@ -41,7 +41,7 @@ class ColorService:
 
         kdt_db = KDTree(rgb_values)
         distance, index = kdt_db.query(rgb_tuple)
-        return f'closest match: {names[index]}'
+        return names[index]
 
     def get_n_width_palette(self, n, image):
         clt = self.get_kmean_cluster(n, image)
